@@ -8,12 +8,6 @@ files:
 file_exists_behavior: OVERWRITE
 
 hooks:
-  ApplicationStop:
-    - location: scripts/stop_app.sh
-      timeout: 600
-      runas: root
-      actionOnNoScript: NONE
-
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 600
@@ -33,3 +27,9 @@ hooks:
     - location: scripts/validate_service.sh
       timeout: 600
       runas: root
+
+  ApplicationStop:
+    - location: scripts/stop_app.sh
+      timeout: 600
+      runas: root
+      actionOnNoScript: NONE
