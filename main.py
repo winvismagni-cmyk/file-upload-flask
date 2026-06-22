@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World Elisha!</p>"
+    return "<p>Hello from AWS CI/CD Workshop!</p>"
 
 def allowed_file(filename):
     return '.' in filename and \
